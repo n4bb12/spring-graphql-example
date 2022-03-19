@@ -1,0 +1,11 @@
+query GetProjectsWithDevelopers {
+  projects {
+    id
+    name
+    developers {
+      id
+      firstName
+      lastName
+    }
+  }
+}

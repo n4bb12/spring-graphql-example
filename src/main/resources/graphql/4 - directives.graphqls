@@ -1,0 +1,16 @@
+enum Case {
+  UPPER,
+  LOWER,
+}
+
+directive @case(case: Case) on FIELD_DEFINITION
+
+type Greeting {
+  first: String!
+  second: String! @case(case: UPPER)
+  third: String! @case(case: LOWER)
+}
+
+extend type Query {
+  hello(subject: String!): Greeting!
+}

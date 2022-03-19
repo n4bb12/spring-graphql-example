@@ -1,0 +1,5 @@
+query GetVehicle {
+  vehicle {
+    coordinates
+  }
+}

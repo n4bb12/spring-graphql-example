@@ -1,0 +1,7 @@
+query Greet {
+  hello(subject: "World") {
+    first
+    second
+    third
+  }
+}

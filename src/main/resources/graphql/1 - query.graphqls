@@ -1,0 +1,15 @@
+type Book {
+  id: ID!
+  title: String!
+  "The name of the primary author"
+  authorName: String!
+}
+
+extend type Query {
+  """
+  Retrieve
+  all
+  books
+  """
+  books: [Book!]!
+}

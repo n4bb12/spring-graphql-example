@@ -1,0 +1,7 @@
+query Greet($subject: String!) {
+  hello(subject: $subject) {
+    first
+    second
+    third
+  }
+}

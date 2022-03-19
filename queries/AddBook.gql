@@ -1,0 +1,7 @@
+mutation AddBook {
+  addBook(input: { title: "Title", authorName: "Author" }) {
+    id
+    title
+    authorName
+  }
+}

@@ -1,0 +1,17 @@
+enum Role {
+  USER
+  ADMIN
+}
+
+type Me {
+  username: String!
+  roles: [Role!]!
+  superpowers: String
+  adminpowers: String @auth(requiredRoles: [ADMIN])
+}
+
+extend type Query {
+  me: Me
+}
+
+directive @auth(requiredRoles: [Role!]!) on FIELD_DEFINITION

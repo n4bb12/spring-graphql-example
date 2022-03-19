@@ -1,0 +1,10 @@
+scalar Coordinates
+
+type Vehicle {
+  coordinates: Coordinates
+  lastSeen: String
+}
+
+extend type Query {
+  vehicle: Vehicle
+}

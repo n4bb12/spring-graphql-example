@@ -1,0 +1,8 @@
+query GetSelf {
+  me {
+    username
+    roles
+    superpowers
+    adminpowers
+  }
+}

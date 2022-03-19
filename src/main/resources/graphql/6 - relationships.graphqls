@@ -1,0 +1,16 @@
+type Developer {
+  id: ID!
+  firstName: String!
+  lastName: String!
+}
+
+type Project {
+  id: ID!
+  name: String!
+  developers: [Developer!]!
+}
+
+extend type Query {
+  developers: [Developer!]!
+  projects: [Project!]!
+}
