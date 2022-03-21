@@ -48,7 +48,7 @@ class ProjectsGraphQlControllerV1(
 /**
  * Fetch using field resolver + Hibernate.initialize --> n + 1 query
  */
-//@Controller
+@Controller
 class ProjectsGraphQlControllerV2(
   private val repository: ProjectsRepository
 ) {
@@ -126,7 +126,7 @@ class ProjectsGraphQlControllerV5(
 /**
  * Fetch using Exposed DAO --> 1 + 1 query
  */
-@Controller
+//@Controller
 class ProjectsGraphQlControllerV6(
   private val repository: ExposedProjectsRepository,
 ) {

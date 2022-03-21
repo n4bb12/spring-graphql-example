@@ -3,7 +3,7 @@
 ## Directories
 
 | Directory                   | Purpose                                                     |
-|-----------------------------|-------------------------------------------------------------|
+| --------------------------- | ----------------------------------------------------------- |
 | queries/                    | Useful for copying to the playground / graphiql             |
 | src/main/resources/graphql/ | Server-side GraphQL schema files                            |
 | src/main/graphql/           | Client-side GraphQL queries + downloaded server-side schema |
@@ -33,3 +33,4 @@ Note that the examples use additional libraries not available on `start.spring.i
 - [Introducing Spring GraphQL](https://spring.io/blog/2021/07/06/introducing-spring-graphql)
 - [Spring GraphQL 1.0.0-M2 available now](https://spring.io/blog/2021/09/01/spring-graphql-1-0-0-m2-available-now)
 - [Spring GraphQL Documentation](https://docs.spring.io/spring-graphql/docs/1.0.0-M2/reference/html/)
+- [Spring One 2021 - Spring GraphQL](https://www.youtube.com/watch?v=Kq3UhUQdIO8)

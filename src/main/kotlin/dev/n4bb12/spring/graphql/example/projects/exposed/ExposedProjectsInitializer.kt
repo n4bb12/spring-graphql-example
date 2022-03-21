@@ -15,7 +15,7 @@ class ExposedProjectsInitializer(private val dataSource: DataSource) : CommandLi
     transaction {
       addLogger(StdOutSqlLogger)
 
-      SchemaUtils.create(DevelopersTable, ProjectDevelopersJoinTable, ProjectsTable)
+      SchemaUtils.create(ExposedDevelopersTable, ExposedProjectDevelopersJoinTable, ExposedProjectsTable)
 
       val dev1 = DeveloperDao.new { firstName = "Josh"; lastName = "Long" }
       val dev2 = DeveloperDao.new { firstName = "James"; lastName = "Ward" }

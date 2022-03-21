@@ -17,34 +17,34 @@ import org.springframework.stereotype.Component
 import java.util.*
 import javax.sql.DataSource
 
-object DevelopersTable : UUIDTable() {
+object ExposedDevelopersTable : UUIDTable() {
   val firstName = varchar("firstName", 50)
   val lastName = varchar("lastName", 50)
 }
 
-object ProjectsTable : UUIDTable() {
+object ExposedProjectsTable : UUIDTable() {
   val name = varchar("name", 50)
 }
 
-object ProjectDevelopersJoinTable : Table() {
-  val developer = reference("developer", DevelopersTable)
-  val project = reference("project", ProjectsTable)
+object ExposedProjectDevelopersJoinTable : Table() {
+  val developer = reference("developer", ExposedDevelopersTable)
+  val project = reference("project", ExposedProjectsTable)
 
   override val primaryKey = PrimaryKey(developer, project)
 }
 
 class DeveloperDao(id: EntityID<UUID>) : UUIDEntity(id) {
-  companion object : UUIDEntityClass<DeveloperDao>(DevelopersTable)
+  companion object : UUIDEntityClass<DeveloperDao>(ExposedDevelopersTable)
 
-  var firstName by DevelopersTable.firstName
-  var lastName by DevelopersTable.lastName
+  var firstName by ExposedDevelopersTable.firstName
+  var lastName by ExposedDevelopersTable.lastName
 }
 
 class ProjectDao(id: EntityID<UUID>) : UUIDEntity(id) {
-  companion object : UUIDEntityClass<ProjectDao>(ProjectsTable)
+  companion object : UUIDEntityClass<ProjectDao>(ExposedProjectsTable)
 
-  var name by ProjectsTable.name
-  var developers by DeveloperDao via ProjectDevelopersJoinTable
+  var name by ExposedProjectsTable.name
+  var developers by DeveloperDao via ExposedProjectDevelopersJoinTable
 }
 
 @Component

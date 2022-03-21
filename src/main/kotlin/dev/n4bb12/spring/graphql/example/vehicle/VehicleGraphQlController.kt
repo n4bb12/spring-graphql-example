@@ -47,7 +47,11 @@ class CoordinatesCoercing : Coercing<Coordinates, String> {
 class CoordinatesScalarConfiguration {
   @Bean
   fun coordinatesScalar(): RuntimeWiringConfigurer {
-    val scalar = GraphQLScalarType.newScalar().name("Coordinates").coercing(CoordinatesCoercing()).build()
+    val scalar = GraphQLScalarType
+      .newScalar()
+      .name("Coordinates")
+      .coercing(CoordinatesCoercing())
+      .build()
     return RuntimeWiringConfigurer { it.scalar(scalar) }
   }
 }

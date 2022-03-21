@@ -6,8 +6,10 @@ import javax.persistence.Entity
 import javax.persistence.FetchType
 import javax.persistence.Id
 import javax.persistence.ManyToMany
+import javax.persistence.Table
 
 @Entity
+@Table(name="developers")
 data class Developer(
   @Id
   val id: String,
@@ -16,6 +18,7 @@ data class Developer(
 )
 
 @Entity
+@Table(name="projects")
 data class Project(
   @Id
   val id: String,
