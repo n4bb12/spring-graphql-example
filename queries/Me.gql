@@ -1,4 +1,4 @@
-query GetSelf {
+query Me {
   me {
     username
     roles
