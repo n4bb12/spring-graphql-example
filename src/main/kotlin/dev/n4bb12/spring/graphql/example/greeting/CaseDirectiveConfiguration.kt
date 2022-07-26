@@ -9,7 +9,7 @@ import graphql.schema.idl.SchemaDirectiveWiringEnvironment
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 import org.springframework.graphql.execution.RuntimeWiringConfigurer
-import java.util.*
+import java.util.Locale
 
 enum class Case {
   UPPER,

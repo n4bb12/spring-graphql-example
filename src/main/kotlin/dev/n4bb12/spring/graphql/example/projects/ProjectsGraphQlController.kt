@@ -2,7 +2,12 @@ package dev.n4bb12.spring.graphql.example.projects
 
 import dev.n4bb12.spring.graphql.example.projects.exposed.ExposedProjectsRepository
 import dev.n4bb12.spring.graphql.example.projects.jooq.JooqProjectsRepository
-import dev.n4bb12.spring.graphql.example.projects.jpa.*
+import dev.n4bb12.spring.graphql.example.projects.jpa.CriteriaProjectsRepository
+import dev.n4bb12.spring.graphql.example.projects.jpa.Developer
+import dev.n4bb12.spring.graphql.example.projects.jpa.DevelopersRepository
+import dev.n4bb12.spring.graphql.example.projects.jpa.HqlProjectsRepository
+import dev.n4bb12.spring.graphql.example.projects.jpa.Project
+import dev.n4bb12.spring.graphql.example.projects.jpa.ProjectsRepository
 import graphql.schema.DataFetchingEnvironment
 import org.hibernate.Hibernate
 import org.springframework.graphql.data.method.annotation.QueryMapping

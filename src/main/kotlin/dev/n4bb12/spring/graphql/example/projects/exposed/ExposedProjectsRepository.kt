@@ -14,7 +14,7 @@ import org.jetbrains.exposed.sql.Table
 import org.jetbrains.exposed.sql.addLogger
 import org.jetbrains.exposed.sql.transactions.transaction
 import org.springframework.stereotype.Component
-import java.util.*
+import java.util.UUID
 import javax.sql.DataSource
 
 object ExposedDevelopersTable : UUIDTable() {

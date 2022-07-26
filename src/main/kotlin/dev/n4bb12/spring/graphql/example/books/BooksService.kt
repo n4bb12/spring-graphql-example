@@ -1,7 +1,7 @@
 package dev.n4bb12.spring.graphql.example.books
 
 import org.springframework.stereotype.Component
-import java.util.*
+import java.util.UUID
 
 data class Book(val id: UUID, val title: String, val authorName: String)
 

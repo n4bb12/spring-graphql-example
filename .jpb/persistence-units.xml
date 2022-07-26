@@ -4,7 +4,7 @@
     <persistence-units>
       <persistence-unit name="dev.n4bb12">
         <packages>
-          <package value="dev.n4bb12.spring.graphql.example" />
+          <package value="dev.n4bb12.spring.graphql.example"/>
         </packages>
       </persistence-unit>
     </persistence-units>

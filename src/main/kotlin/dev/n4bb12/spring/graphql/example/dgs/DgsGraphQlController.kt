@@ -1,6 +1,12 @@
 package dev.n4bb12.spring.graphql.example.dgs
 
-import com.netflix.graphql.dgs.*
+import com.netflix.graphql.dgs.DgsComponent
+import com.netflix.graphql.dgs.DgsData
+import com.netflix.graphql.dgs.DgsDirective
+import com.netflix.graphql.dgs.DgsMutation
+import com.netflix.graphql.dgs.DgsQuery
+import com.netflix.graphql.dgs.DgsScalar
+import com.netflix.graphql.dgs.InputArgument
 import dev.n4bb12.spring.graphql.example.books.BookInput
 import dev.n4bb12.spring.graphql.example.books.BooksService
 import dev.n4bb12.spring.graphql.example.dgs.types.Greeting
@@ -12,14 +18,19 @@ import dev.n4bb12.spring.graphql.example.vehicle.Coordinates
 import dev.n4bb12.spring.graphql.example.vehicle.Vehicle
 import graphql.language.ArrayValue
 import graphql.language.EnumValue
-import graphql.schema.*
+import graphql.schema.Coercing
+import graphql.schema.CoercingSerializeException
+import graphql.schema.DataFetcher
+import graphql.schema.DataFetcherFactories
+import graphql.schema.DataFetchingEnvironment
+import graphql.schema.GraphQLFieldDefinition
 import graphql.schema.idl.SchemaDirectiveWiring
 import graphql.schema.idl.SchemaDirectiveWiringEnvironment
 import org.springframework.security.access.prepost.PreAuthorize
 import org.springframework.security.core.Authentication
 import org.springframework.security.core.context.SecurityContextHolder
 import java.time.Instant
-import java.util.*
+import java.util.Locale
 
 @DgsComponent
 class DgsGraphQlController(

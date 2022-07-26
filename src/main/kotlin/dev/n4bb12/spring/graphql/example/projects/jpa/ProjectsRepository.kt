@@ -9,7 +9,7 @@ import javax.persistence.ManyToMany
 import javax.persistence.Table
 
 @Entity
-@Table(name="developers")
+@Table(name = "developers")
 data class Developer(
   @Id
   val id: String,
@@ -18,7 +18,7 @@ data class Developer(
 )
 
 @Entity
-@Table(name="projects")
+@Table(name = "projects")
 data class Project(
   @Id
   val id: String,
